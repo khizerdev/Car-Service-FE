@@ -1,0 +1,78 @@
+/*******************************
+* Does not work properly if "in" is added after "collapse".
+* Get free snippets on bootpen.com
+*******************************/
+.panel-group .panel {
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.panel-default > .panel-heading {
+    padding: 0;
+    border-radius: 0;
+    color: #fff;
+}
+
+.panel-title {
+    font-size: 14px;
+}
+
+.panel-title > a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+}
+
+.font-14 {
+    font-size: 14;
+}
+
+.placeholder::placeholder {
+    font-size: 12px;
+}
+
+.form-control:focus {
+    border-color: #fd3e1d;
+}
+
+.more-less {
+    float: right;
+    color: #212121;
+}
+
+.panel-default > .panel-heading + .panel-collapse > .panel-body {
+    border-top-color: #EEEEEE;
+}
+
+.panel-collapse {
+    background-color: #fff;
+}
+
+.fa-plus {
+    color: #fd3e1d;
+    height: 26px;
+    width: 29px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 6px 9px;
+}
+
+.fa-minus {
+    color: #fff;
+    height: 26px;
+    width: 29px;
+    background-color: transparent;
+    padding: 6px 9px;
+}
+
+.font-23 {
+    font-size: 23px !important;
+}
+
+.w-45 {
+    width: 45%;
+}
+
+.z1-1 {
+    zoom: 1.1;
+}

@@ -1,0 +1,6 @@
+.list-group-item {
+    border: 2px solid #ff593c
+}
+.list-group-item:hover {
+    z-index: 0;
+}

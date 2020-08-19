@@ -1,0 +1,68 @@
+/* .nav-tabs .nav-item.show,
+.nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: #ff593c;
+  border-color: #ff593c;
+  padding: 5px 18px;
+  border-radius: 5px;
+} */
+
+.my-link {
+  border: none;
+  color: black;
+  padding: 5px 18px;
+  border-radius: 5px;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.my-link {
+  border: 1px solid transparent;
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+}
+
+.my-link {
+  display: block;
+  padding: .5rem 1rem;
+}
+
+.btn-booking {
+  color: #fff !important;
+  background-color: #0076a3;
+  border-color: #0076a3;
+}
+.btn-booking:hover {
+  color: #fff !important;
+  background-color: #1b98c7;
+  border-color: #1b98c7;
+}
+.btn-booking:focus {
+  box-shadow: none;
+}
+
+.btn-detail:focus {
+  box-shadow: none;
+}
+.btn-detail {
+  color: #fff !important;
+  background-color: #7b8b9f;
+  border-color: #7b8b9f;
+}
+
+.btn-chat {
+  color: #fff !important;
+  background-color: #7b8b9f;
+  border-color: #7b8b9f;
+}
+.btn-chat:focus {
+  box-shadow: none;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 670px;
+  }
+}

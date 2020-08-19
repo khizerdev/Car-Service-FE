@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Style CSS & Font Awesome -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/booking-chat.css">
+    <link rel="stylesheet" href="assets/plugin/font-awesome-4.7.0/css/font-awesome.min.css">
+
+    <!-- font-poppin -->
+
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <!-- responsive-query-custom-js -->
+
+    <link rel="stylesheet" href="assets/css/query.css"></script>
+
+    <!-- select-query -->
+
+    <script src="assets/js/jquery.js"></script>
+
+    <title>Car Service - Booking Chat</title>
+
+</head>
+
+<body>
+
+    <!-- navbar -->
+
+    <nav class="navbar navbar-expand-lg bg-dark-service fixed-top" id="scroller" style="background-color:#34485d;">
+        <div class="container">
+            <a class="navbar-brand js-scroll-trigger w-90md" href="index.html"><img src="assets/images/logo.png" alt="" class="img-fluid img-logo"></a>
+            <button class="navbar-toggler navbar-toggler-right d-none" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars text-white" id="bars" aria-hidden="true"></i></button>
+
+            <span style="font-size:30px;cursor:pointer" class="openNv navbar-toggler-right" onclick="openNav()"><i class="fa fa-bars bar-side text-white" id="op" aria-hidden="true"></i></span>
+
+
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    <li class="nav-item px-md-4"><a class="nav-link js-scroll-trigger active-menu text-white" href="#about">Home</a></li>
+                    <li class="nav-item px-md-3"><a class="nav-link js-scroll-trigger text-white w-how" href="#services">How It Work</a></li>
+                    <li class="nav-item px-md-4"><a class="nav-link js-scroll-trigger text-white" href="#portfolio">Service</a></li>
+                </ul>
+            </div>
+        </div> 
+    </nav>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html" class="text-black px-3">Home</a>
+        <a href="#" class="text-black px-3">How It Work</a>
+        <a href="#" class="text-black px-3">Service</a>
+    </div>
+
+    <!-- booking-chat -->
+    <div class="pt-5">
+        <div class="container-fluid bg-booking-chat px-md-5 pt-5">
+            <div class="row px-md-5 py-5">
+                <div class="col-md-12 px-md-5">
+                    <h5 class="account">Account Elements</h5>
+                    <ul class="nav nav-tabs border-none" id="myTab" role="tablist" style="zoom: 1.3;">
+
+                        <li class="nav-item text-center" id="1">
+                            <a class="my-link bg-car-service pt-2" id="tab1" data-toggle="tab" href="#home" role="tab"
+                                aria-controls="home" aria-selected="true">
+                                <div>
+                                    <img src="assets/images/booking-list.png" class="img-fluid booking-list" width="75px" alt="">
+                                    <p class="mb-0 pt-1 font-13 text-white" id="lister">Booking List</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="nav-item text-center bg-white n-active mt-2" id="2">
+                            <a class="" id="tab1" data-toggle="tab" href="#home" role="tab"
+                                aria-controls="home" aria-selected="true">
+                                <div>
+                                    <img src="assets/images/new_full_information.png" class="img-fluid w-40" alt="">
+                                    <p class="mb-0 pt-1 font-13 text-dark-gray font-10" id="lister">Booking List</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="nav-item text-center bg-white n-active mt-2 ml-3" id="3">
+                            <a class=""  id="tab2" data-toggle="tab" href="#profile" role="tab"
+                                aria-controls="home" aria-selected="true">
+                                <div>
+                                    <img src="assets/images/edit-profile-icon.png" class="img-fluid w-40" alt="">
+                                    <p class="mb-0 pt-1 font-13 text-dark-gray font-10" id="lister">Edit Profile</p>
+                                </div>
+                            </a>
+                        </li>
+
+                        <li class="nav-item text-center" id="4">
+                            <a class="my-link bg-car-service ml-3 not-active" id="tab2" data-toggle="tab" href="#profile" role="tab"
+                                aria-controls="profile" aria-selected="false">
+                                    <img src="assets/images/Personal-information.png"  class="img-fluid profile-list pt-1" alt="">
+                                    <p class="mb-0 pt-1 font-13 text-black edit" id="edit">Edit Profile</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-md-12 px-md-5 py-4 mb-5">
+                    <div class="tab-content mb-5" id="myTabContent">
+                        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+        
+                            <div class="container-fluid bg-white py-3 px-4">
+                                <div class="row">
+                                    <div class="col-md-3 py-2 py-sm-1 py-md-0">
+                                        <input type="text" class="form-control h-40" placeholder="Search By Id">
+                                    </div>
+                                    <div class="col-md-2 py-2 py-sm-1 py-md-0">
+                                        <input type="text" class="form-control h-40" placeholder="07/10/2020">
+                                    </div>
+                                    <div class="col-md-2 py-2 py-sm-1 py-md-0">
+                                        <input type="text" class="form-control h-40" placeholder="07/11/2020">
+                                    </div>
+                                    <div class="col-md-3 col-12 py-2 py-sm-1 py-md-0">
+                                        <select id="inputState" class="form-control h-40">
+                                            <option selected disabled class="font-weight-bold">Status</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-2 py-2 py-sm-1 py-md-0">
+                                        <a type="button" class="align-content-center btn btn-block btn-booking d-flex h-40 justify-content-center">Filter</a>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="container-fluid bg-white py-3 px-4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="table-responsive">
+                                            <table class="table table-striped">
+                                                <thead class="bg-car-service text-white">
+                                                    <tr>
+                                                        <th class="text-center">Order#</th>
+                                                        <th class="text-center">Purchased On</th>
+                                                        <th class="text-center">Item</th>
+                                                        <th class="text-center">Subtotal</th>
+                                                        <th class="text-center">Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="text-grey text-center">
+                                                    <tr>
+                                                        <td>#109802</td>
+                                                        <td>
+                                                           08/05/2020 09:28 PM
+                                                        </td>
+                                                        <td>3 Items</td>
+                                                        <td>$327</td>
+                                                        <td>
+                                                            <a href="#" class="btn btn-detail px-md-3 mb-2 mb-sm-0" data-toggle="modal" data-target="#detail">
+                                                                Detail
+                                                            </a>
+                                                            <a href="#" class="btn btn-chat" data-toggle="modal" data-target="#chat">
+                                                                Chat
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#109802</td>
+                                                        <td>
+                                                           08/05/2020 09:28 PM
+                                                        </td>
+                                                        <td>3 Items</td>
+                                                        <td>$327</td>
+                                                        <td>
+                                                            <a href="#" class="btn btn-detail px-md-3 mb-2 mb-sm-0">
+                                                                Detail
+                                                            </a>
+                                                            <a href="#" class="btn btn-chat">
+                                                                Chat
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#109802</td>
+                                                        <td>
+                                                           08/05/2020 09:28 PM
+                                                        </td>
+                                                        <td>3 Items</td>
+                                                        <td>$327</td>
+                                                        <td>
+                                                            <a href="#" class="btn btn-detail px-md-3 mb-2 mb-sm-0">
+                                                                Detail
+                                                            </a>
+                                                            <a href="#" class="btn btn-chat">
+                                                                Chat
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#109802</td>
+                                                        <td>
+                                                           08/05/2020 09:28 PM
+                                                        </td>
+                                                        <td>3 Items</td>
+                                                        <td>$327</td>
+                                                        <td>
+                                                            <a href="#" class="btn btn-detail px-md-3 mb-2 mb-sm-0">
+                                                                Detail
+                                                            </a>
+                                                            <a href="#" class="btn btn-chat">
+                                                                Chat
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#109802</td>
+                                                        <td>
+                                                           08/05/2020 09:28 PM
+                                                        </td>
+                                                        <td>3 Items</td>
+                                                        <td>$327</td>
+                                                        <td>
+                                                            <a href="#" class="btn btn-detail px-md-3 mb-2 mb-sm-0">
+                                                                Detail
+                                                            </a>
+                                                            <a href="#" class="btn btn-chat">
+                                                                Chat
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#109802</td>
+                                                        <td>
+                                                           08/05/2020 09:28 PM
+                                                        </td>
+                                                        <td>3 Items</td>
+                                                        <td>$327</td>
+                                                        <td>
+                                                            <a href="#" class="btn btn-detail px-md-3 mb-2 mb-sm-0">
+                                                                Detail
+                                                            </a>
+                                                            <a href="#" class="btn btn-chat">
+                                                                Chat
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>#109802</td>
+                                                        <td>
+                                                           08/05/2020 09:28 PM
+                                                        </td>
+                                                        <td>3 Items</td>
+                                                        <td>$327</td>
+                                                        <td>
+                                                            <a href="#" class="btn btn-detail px-md-3 mb-2 mb-sm-0">
+                                                                Detail
+                                                            </a>
+                                                            <a href="#" class="btn btn-chat">
+                                                                Chat
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+    
+                        </div>
+                        <div class="tab-pane fade" style="margin-bottom: 150px" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                            <div class="container-fluid bg-white py-3 px-4">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-4">
+                                        <img src="assets/images/man-edit-profile.png" class="img-fluid" alt="">
+                                    </div>
+                                    <div class="col-md-9 py-md-5">
+                                        <div class="border-bottom">
+                                            <div class="container px-0">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <h4 class="mb-0 d-inline text-dark-gray">Mr John Doe</h4>
+                                                        <a href="#" class="btn float-right btn-detail px-4 mb-2 mb-md-0 mb-sm-0" >
+                                                            Edit
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container px-0 py-2">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="container">
+                                                            <div class="row">
+                                                                <div class="col-md-11 d-flex pl-0">
+                                                                    <img src="assets/images/map.png" class="img-fluid" alt="">
+                                                                    <p class="mb-0 text-edit pl-3 pt-2"> 108 Hillston Street , North East</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container px-0 py-1">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <h6 class="mb-0 text-grey font-weight-bold">RANKINGS</h6>
+                                                    </div>
+                                                    <div class="col-md-12 py-1">
+                                                        <img src="assets/images/ranking.png" class="img-fluid" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="container py-1 px-0 font-13">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <p class="mb-0 text-dark font-16 fw-600">Contact Information :</p>
+                                                    <table class="table">
+                                                        <tbody>
+                                                          <tr class="border-none">
+                                                            <th scope="row" class="border-none pl-0 pt-2 pb-0"><span class="text-grey fw-500">Phone No:</span></th>
+                                                            <td class="border-none text-black">(987) 5672413</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th scope="row" class="border-none pl-0 pt-2 pb-0"><span class="text-grey fw-500">E-mail :</span></th>
+                                                            <td class="border-none text-edit">johndoe@gmail.com</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th scope="row" class="border-none pl-0 pt-2 pb-0"><span class="text-grey fw-500">Site :</span></th>
+                                                            <td class="border-none text-edit">www.johndoe.com</td>
+                                                          </tr>
+                                                        </tbody>
+                                                      </table>
+                                                    
+                                                    
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p class="mb-0 text-dark py-1 font-16 fw-600">Basic Information :</p>
+                                                    <table class="table">
+                                                        <tbody>
+                                                          <tr class="border-none">
+                                                            <th scope="row" class="border-none pl-0"><span class="text-grey fw-500">Birthday</span></th>
+                                                            <td class="border-none text-black">23 May 1998</td>
+                                                          </tr>
+                                                          <tr>
+                                                            <th scope="row" class="border-none pl-0"><span class="text-grey fw-500">Gender :</span></th>
+                                                            <td class="border-none text-black">Male</td>
+                                                          </tr>
+                                                          <tr>
+                                                        </tbody>
+                                                      </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- footer -->
+
+    <div class="container-fluid bg-dark-service py-5 z-9">
+        <div class="row">
+            <div class="col-md-4 offset-md-1 col-sm-12 col-12 text-center text-md-left px-4">
+              <img src="assets/images/logo.png" class="img-fluid" width="35%" alt="">
+              <p class="text-white py-2">Far far away , behind the word mountains , far from the countires.</p>
+            </div>
+            <div class="col-md-3 pt-md-4 text-center text-md-left">
+              <p class="text-car-service pl-md-4 pl-0 font-weight-bold font-20">Information</p>
+              <ul class="px-0 px-md-4 px-sm-4">
+                  <li class="py-1"><a href="#" class="text-white">About Us</a></li>
+                  <li class="py-1"><a href="#" class="text-white">More Search</a></li>
+                  <li class="py-1"><a href="#" class="text-white">Blogs</a></li>
+              </ul>
+            </div>
+            <div class="col-md-4 pt-md-4 pl-md-0 text-center text-md-left">
+              <p class="text-car-service pl-md-4 pl-2 font-weight-bold font-20">Subscribe for more</p>
+              <div class="container px-4 ">
+                  <div class="row">
+                      <div class="col-md-8 col-12">
+                          <input type="email" class="form-control custom-email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                      </div>
+                  </div>
+              </div>
+              <div class="container px-4 pt-md-2 pt-3">
+                  <div class="row">
+                      <div class="col-md-10">
+                          <a href="" class="btn btn-orange btn-radius">Subscribe</a>
+                      </div>
+                  </div>
+              </div>
+              
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Chat -->
+    <div class="modal fade" id="chat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document" style="width: 546px;">
+            <div class="modal-content">
+                <div class="modal-header p-0 border-none justify-content-end modal-end">
+                    <div data-dismiss="modal" aria-label="Close">
+                        <img src="assets/images/close.png" width="25px" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 px-0">
+                                <div class="container pb-2">
+                                    <div class="row">
+                                        <div class="col-md-1 col-1 pt-2 pl-0">
+                                            <i class="fa fa-user text-white p-2 bg-new br-user" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col-md-9 col-9 offset-1 offset-md-0 bg-light-gray chat-box-gray br-10">
+                                            <p class="mb-0 font-12 py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet magna nisl, sit amet malesuada</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container py-2">
+                                    <div class="row">
+                                        <div class="col-md-9 col-10 offset-md-2 bg-car-service chat-box-orange br-10">
+                                            <p class="mb-0 font-12 py-3 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet magna
+                                                nisl, sit amet malesuada</p>
+                                        </div>
+                                        <div class="col-md-1 col-2 col-sm-1 px-2 pt-4">
+                                            <img src="assets/images/man-image.png" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container pb-2">
+                                    <div class="row">
+                                        <div class="col-md-1 col-1 pt-2 px-1">
+                                            <i class="fa fa-user text-white p-2 bg-new br-user" aria-hidden="true"></i>
+                                        </div>
+                                        <div class="col-md-9 col-9 offset-1 offset-md-0 bg-light-gray chat-box-gray br-10">
+                                            <p class="mb-0 font-12 py-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet magna nisl, sit amet malesuada</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container py-2">
+                                    <div class="row">
+                                        <div class="col-md-9 col-10 offset-md-2 bg-car-service chat-box-orange br-10">
+                                            <p class="mb-0 font-12 py-3 text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer laoreet magna
+                                                nisl, sit amet malesuada</p>
+                                        </div>
+                                        <div class="col-md-1 col-2 col-sm-1 px-2 pt-4">
+                                            <img src="assets/images/man-image.png" class="img-fluid" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container py-2">
+                                    <div class="row">
+                                        <div class="col-md-12 px-0 px-md-2 px-sm-2">
+                                            <div class="input-group br-15">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><img src="assets/images/man-image.png" class="img-fluid" width="30" alt=""></span>
+                                                </div>
+                                                <input type="text" class="form-control chat-input" placeholder="Say Something..">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Detail -->
+    <div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content z-9">
+                <div class="modal-header p-0 border-none justify-content-end modal-end">
+                    <div data-dismiss="modal" aria-label="Close">
+                        <img src="assets/images/close.png" width="25px" class="img-fluid" alt="">
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 border-car-2 p-3">
+                                <p class="mb-0 text-center text-car-service font-14">
+                                    Your vehicle has been repaired please pay your bill to recieve your vehicle
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container py-3">
+                        <div class="row">
+                            <div class="col-md-4 text-left">
+                                <p class="mb-0 font-weight-bold text-dark-gray font-18">
+                                    Order Detail
+                                </p>
+                            </div>
+                            <div class="col-md-5 offset-md-3 text-right">
+                                <p class="mb-0 font-weight-bold text-dark-gray font-16">
+                                    Order Total: <span class="text-car-service">$11537.28</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="col-md-12 px-0">
+                            <p class="mb-0 text-car-service">Booking Info:</p>
+                        </div>
+                        <div class="col-md-10 pl-5">
+                            <table class="table">
+                                <tbody>
+                                  <tr class="text-grey font-14">
+                                    <td class="border-0 p-2 text-dark-gray w-25" scope="row">Address</td>
+                                    <td class="border-0 p-2">Bishopgate Kitchen 2-4 Brushfield Street London</td>
+                                  </tr>
+                                  <tr class="text-grey font-14">
+                                    <td class="border-0 p-2 text-dark-gray w-25" scope="row">Postcode</td>
+                                    <td class="border-0 p-2">E16AN</td>
+                                  </tr>
+                                  <tr class="text-grey font-14">
+                                    <td class="border-0 p-2 text-dark-gray w-25" scope="row">Booking Date</td>
+                                    <td class="border-0 p-2">2020-06-11</td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="container pt-3">
+                        <div class="col-md-12 px-0">
+                            <p class="mb-0 text-car-service">Vehicle Details:</p>
+                        </div>
+                        <div class="col-md-9 pl-5">
+                            <table class="table">
+                                <tbody>
+                                  <tr class="text-grey font-14">
+                                    <td class="border-0 p-2 text-dark-gray w-25">Car Reg</td>
+                                    <td class="border-0 p-2">HY59X00</td>
+                                  </tr>
+                                  <tr class="text-grey font-14">
+                                    <td class="border-0 p-2 text-dark-gray w-25">Name</td>
+                                    <td class="border-0 p-2">Ford</td>
+                                  </tr>
+                                  <tr class="text-grey font-14">
+                                    <td class="border-0 p-2 text-dark-gray w-25">Range</td>
+                                    <td class="border-0 p-2">Fiesta</td>
+                                  </tr>
+                                  <tr class="text-grey font-14">
+                                    <td class="border-0 p-2 text-dark-gray w-25">Model Year</td>
+                                    <td class="border-0 p-2">2008</td>
+                                  </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="container pt-3">
+                        <div class="row">
+                            <div class="col-md-12 px-0 px-md-2 px-sm-2">
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead class="bg-car-service text-white">
+                                            <tr>
+                                                <th class="text-center">Part Name</th>
+                                                <th class="text-center">Price</th>
+                                                <th class="text-center">Labour Cost</th>
+                                                <th class="text-center">Total</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-grey text-center">
+                                            <tr>
+                                                <td>Fuel Tank</td>
+                                                <td>
+                                                    $206.928
+                                                </td>
+                                                <td>$108</td>
+                                                <td>$314.928</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fuel Tank</td>
+                                                <td>
+                                                    $206.928
+                                                </td>
+                                                <td>$108</td>
+                                                <td>$314.928</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Fuel Tank</td>
+                                                <td>
+                                                    $206.928
+                                                </td>
+                                                <td>$108</td>
+                                                <td>$314.928</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+        //  $(document).ready(function () {
+        //         $('#tab1').click(function () {
+        //             $('#tab1 > img').attr("src", "assets/images/booking-list.png");
+        //             $('#tab2 > img').attr("src", "assets/images/edit-profile-icon.png");
+        //         });
+        //         $('#tab2').click(function () {
+        //             $('#tab1 > img').attr("src", "assets/images/new_full_information.png");
+        //             $('#tab2 > img').attr("src", "assets/images/Personal-information.png");
+        //         });
+
+        //     });
+
+        $(document).ready(function () {
+            $('#2').hide();
+
+            $('#1').click(function() {
+                $(this).show();
+            })
+            $('#2').click(function() {
+                $(this).hide();
+                $('#1').show();
+                $('#3').show();
+                $('#4').hide();
+                $('.edit').removeClass('text-white');
+                $('.edit').addClass('text-black');
+            })
+
+            $('#4').hide();
+
+            $('#3').click(function() {
+                $('.edit').removeClass('text-black');
+                $('.edit').addClass('text-white');
+                $('.lister').removeClass('text-white');
+                $('.lister').addClass('text-black');
+                $(this).hide();
+                $('#2').show();
+                $('#1').hide();
+                $('#4').show();
+            })
+            $('#4').click(function() {
+                $(this).show();
+            })
+        })
+    </script>
+
+    <script>
+        $(function () {
+            var header = $("#scroller");
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 40) {
+                    header.removeClass("bg-dark-service").addClass("navbar-white");
+                } else {
+                    header.removeClass("navbar-white").addClass("bg-dark-service");
+                }
+            });
+        });
+    </script>
+
+<script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "200px";
+    }
+    
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+
+<script>
+    $(function () {
+            var header = $("#op");
+            $(window).scroll(function () {
+                var scroll = $(window).scrollTop();
+
+                if (scroll >= 40) {
+                    header.removeClass("text-white").addClass("text-black");
+                } else {
+                    header.removeClass("text-black").addClass("text-white");
+                }
+            });
+        });
+</script>
+    
+
+</body>
+
+</html>
